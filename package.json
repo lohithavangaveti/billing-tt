@@ -1,0 +1,15 @@
+{
+  "name": "billing-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm install --prefix frontend-app && npm install --prefix backend",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend-app\"",
+    "dev:frontend": "npm run dev --prefix frontend-app",
+    "dev:backend": "npm run dev --prefix backend",
+    "build": "npm run build --prefix frontend-app"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
